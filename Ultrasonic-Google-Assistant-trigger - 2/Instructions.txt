@@ -1,0 +1,7 @@
+1. Extract the contents to any directory.
+2. Wire the ultrasonic sensor to Pi as shown in the schematic.
+3. Move into /home/pi/env/lib/python3.4/site-packages/googlesamples/assistant/grpc folder
+   and replace the existing pushtotalk.py file with the pushtotalk.py given in the zip.
+4. Copy the trigger folder into any directory and update it's location in the HCSR04-Trigger.sh script.
+5. Start the script to start google assistant and then start the ultrasonic trigger script.
+6. Make the gassist-start.sh and HCSR04-Trigger.sh executable and use it to start the google assistant and ultrasonic trigger respectively.

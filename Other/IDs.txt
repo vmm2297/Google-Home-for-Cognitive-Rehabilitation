@@ -1,0 +1,4 @@
+instance ID: F44D7CF6E9C76DB2DF4E1AB53ABE7B00
+project ID: jnv-eprp
+model ID: jnv-eprp-jnv-eprp-gcf340
+main function: python ./assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/library/hotword.py --device_model_id jnv-eprp-jnv-eprp-gcf340
