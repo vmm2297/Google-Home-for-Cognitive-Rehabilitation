@@ -1,0 +1,49 @@
+{
+    "manifest": {
+        "displayName": "DeepBreathing",
+        "invocationName": "DeepBreathing",
+        "category": "PRODUCTIVITY"
+    },
+    "actions": [
+        {
+            "name": "com.acme.actions.deepbreathing",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.acme.intents.deepbreathing",
+                "trigger": {
+                    "queryPatterns": [
+                        "I'm tired",
+                        "I'm vervous",
+                        "I'm worried"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Starting deep breathing visualization"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "com.acme.commands.deepbreathing"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "types": [
+    ]
+}

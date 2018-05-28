@@ -1,0 +1,49 @@
+{
+    "manifest": {
+        "displayName": "Waterfall",
+        "invocationName": "Waterfall",
+        "category": "PRODUCTIVITY"
+    },
+    "actions": [
+        {
+            "name": "com.acme.actions.waterfall",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.acme.intents.waterfall",
+                "trigger": {
+                    "queryPatterns": [
+                        "Take me to a waterfall",
+                        "Take me to the waterfall",
+                        "Take me to the waterfalls"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Taking you to a waterfall"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "com.acme.commands.waterfall"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "types": [
+    ]
+}
