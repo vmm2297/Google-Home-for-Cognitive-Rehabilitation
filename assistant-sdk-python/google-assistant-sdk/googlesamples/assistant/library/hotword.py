@@ -24,7 +24,7 @@ import pathlib2 as pathlib
 
 import google.oauth2.credentials
 
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 import time
 import pygame
 
