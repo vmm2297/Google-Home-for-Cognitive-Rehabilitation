@@ -16,7 +16,7 @@
 
 
 from __future__ import print_function
-
+import subprocess
 import argparse
 import json
 import os.path
@@ -159,7 +159,11 @@ def process_event(event):
                 pygame.mixer.music.load("/home/pi/Music/water-stream.mp3")
                 pygame.mixer.music.play()
                 time.sleep(10)
-
+            if command == "com.acme.commands.game":
+                print("Here is a memory game for you")
+                time.sleep(3)
+                subprocess.call(["python3", "/home/pi/Desktop/python-memory-game/memory.py","/home/pi/Desktop/python-memory-game/memory.txt"])
+                time.sleep(10)
 
 def main():
     parser = argparse.ArgumentParser(
