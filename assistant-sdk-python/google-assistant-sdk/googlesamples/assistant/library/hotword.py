@@ -164,6 +164,12 @@ def process_event(event):
                 time.sleep(3)
                 subprocess.call(["python3", "/home/pi/Desktop/python-memory-game/memory.py","/home/pi/Desktop/python-memory-game/memory.txt"])
                 time.sleep(10)
+            if command == "com.acme.commands.puzzle":
+                print("Here is a puzzle game for you")
+                time.sleep(3)
+                subprocess.call(["python3", "/home/pi/Desktop/CSC520/main.py","/home/pi/Desktop/CSC520/imgs/0.gif", "/home/pi/Desktop/CSC520/imgs/1.gif","/home/pi/Desktop/CSC520/imgs/2.gif","/home/pi/Desktop/CSC520/imgs/3.gif","/home/pi/Desktop/CSC520/imgs/4.gif","/home/pi/Desktop/CSC520/imgs/5.gif","/home/pi/Desktop/CSC520/imgs/6.gif","/home/pi/Desktop/CSC520/imgs/7.gif"])
+                time.sleep(10)
+
 
 def main():
     parser = argparse.ArgumentParser(
