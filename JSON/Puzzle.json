@@ -1,12 +1,12 @@
 {
     "manifest": {
-        "displayName": "Beach",
-        "invocationName": "Beach",
+        "displayName": "Puzzle",
+        "invocationName": "Puzzle",
         "category": "PRODUCTIVITY"
     },
     "actions": [
         {
-            "name": "com.acme.actions.beach",
+            "name": "com.acme.actions.puzzle",
             "availability": {
                 "deviceClasses": [
                     {
@@ -15,12 +15,12 @@
                 ]
             },
             "intent": {
-                "name": "com.acme.intents.beach",
+                "name": "com.acme.intents.puzzle",
                 "trigger": {
                     "queryPatterns": [
-                        "help me fall asleep",
-                        "I wanna go to tahiti",
-			"bring me to tahiti"
+                        "activate puzzle game",
+			"I would like some puzzle games"
+                        
                     ]
                 }
             },
@@ -30,12 +30,12 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Starting beach visualization"
+                                    "textToSpeech": " activating puzzle game "
                                 }
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "com.acme.commands.beach"
+                                    "command": "com.acme.commands.puzzle"
                                 }
                             }
                         ]

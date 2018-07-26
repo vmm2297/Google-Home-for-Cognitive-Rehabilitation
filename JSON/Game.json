@@ -20,7 +20,10 @@
                     "queryPatterns": [
                         "play memory puzzle game",
                         "I want some games",
-			"memory exercice"
+			"memory exercice",
+			"start a memory game for me",
+			"start a memory game for jerry"
+
                     ]
                 }
             },
