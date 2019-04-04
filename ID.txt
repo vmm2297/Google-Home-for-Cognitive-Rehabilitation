@@ -1,3 +1,0 @@
-eprp-3be66 project ID
-googlesamples-assistant-hotword --project_id eprp-3be66 --device_model_id eprp-3be66-eprp-google-efvide
-python hotword.py --device_model_id eprp-3be66-eprp-google-efvide
