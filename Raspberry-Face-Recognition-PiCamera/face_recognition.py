@@ -2,6 +2,9 @@
 import cv2
 from picamera.array import PiRGBArray
 from picamera import PiCamera
+#Import espeak for speaking
+from espeak import espeak
+import os
 # Import numpy for matrices calculations
 import numpy as np
 import time
@@ -28,6 +31,9 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 
 # Initialize and start the video frame capture
 #cam = cv2.VideoCapture(-1)
+
+#initialize it for calling out espeak later on
+count = 0
 
 # Loop
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
@@ -56,8 +62,13 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
             Id = "Jerry"
             
         #If not exist, then it is Unknown
-        elif(Id == 2):
-            Id = "Jenifer"
+        elif "8888" in str(Id):
+            Id = "Hey Ryan check your calendar:)"            
+            #Call out the text by using espeak, we want to just call out once
+            if count == 0:
+                os.system("espeak -ven-us+f3 'Hey Ryan. Check your calendar' 2>/dev/null")
+                count = 1 #Set it to 0, so that it won't get call out next time
+		
         else:
             #print(Id)
 	    Id = "Unknown"
