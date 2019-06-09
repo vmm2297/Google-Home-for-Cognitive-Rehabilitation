@@ -68,6 +68,9 @@ def process_event(event):
     if event.type == EventType.ON_DEVICE_ACTION:
         for command, params in event.actions:
             print('Do command', command, 'with params', str(params))
+            if command == "com.acme.commands.calendar":
+                webbrowser.open("https://calendar.google.com/calendar/r/month?pli=1")
+                print("starting calendar")     
             if command == "com.acme.commands.5Words":
                 print("starting 5 words visualization")
                 time.sleep(3)
